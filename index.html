@@ -66,7 +66,7 @@
         t = i.value;
         n = t.replace(/\s/g, "").length;
         w = t.trim() ? t.split(/\s+/).length : 0;
-        s.innerHTML = `<span onclick="navigator.clipboard.writeText('${t.length}')"><small>chars</small><br>${t.length}</span><span onclick="navigator.clipboard.writeText('${n}')"><small>no space</small><br>${n}</span><span onclick="navigator.clipboard.writeText('${w}')"><small>words</small><br>${w}</span>`;
+        s.innerHTML = `<span onclick="navigator.clipboard.writeText('${t.length}')"><small>chars</small><br>${t.length}</span><span onclick="navigator.clipboard.writeText('${n}')"><small>no spaces</small><br>${n}</span><span onclick="navigator.clipboard.writeText('${w}')"><small>words</small><br>${w}</span>`;
       }
       i.addEventListener("input", u);
       u();
