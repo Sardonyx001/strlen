@@ -4,7 +4,7 @@ exactly what the name says, string length + α
 
 ## what?
 
-see for yourself <https://strlen.jamell.dev>
+see for yourself at [strlen.jamell.dev](https://strlen.jamell.dev)
 
 ## why?
 
