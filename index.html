@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>strlen++</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: system-ui;
+        padding: 20px;
+        background: #1a1a1a;
+        color: #e0e0e0;
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 12px;
+        background: #242424;
+        color: #e0e0e0;
+        border: 1px solid #333;
+        border-radius: 6px;
+        font-size: 13px;
+        resize: none;
+      }
+      div {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 20px;
+      }
+      div > span {
+        padding: 15px;
+        background: #242424;
+        border: 1px solid #333;
+        border-radius: 6px;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+        transition: 0.2s;
+      }
+      div > span:hover {
+        background: #2e2e2e;
+        border-color: #555;
+      }
+      small {
+        font-size: 11px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="i" placeholder="type..."></textarea>
+    <div id="s"></div>
+    <script>
+      let i = document.getElementById("i"),
+        s = document.getElementById("s"),
+        t,
+        n,
+        w;
+      function u() {
+        t = i.value;
+        n = t.replace(/\s/g, "").length;
+        w = t.trim() ? t.split(/\s+/).length : 0;
+        s.innerHTML = `<span onclick="navigator.clipboard.writeText('${t.length}')"><small>chars</small><br>${t.length}</span><span onclick="navigator.clipboard.writeText('${n}')"><small>no space</small><br>${n}</span><span onclick="navigator.clipboard.writeText('${w}')"><small>words</small><br>${w}</span>`;
+      }
+      i.addEventListener("input", u);
+      u();
+    </script>
+  </body>
+</html>
